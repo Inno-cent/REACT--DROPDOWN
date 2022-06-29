@@ -13,32 +13,19 @@ function App() {
   ];
 
   const [isOpen, setOpen] = useState(false);
-  const [items, setItem] = useState(data);
-  const [selectedItem, setSelectedItem] = useState(null);
 
   const toggleDropdown = () => setOpen(!isOpen);
-
-  const handleItemClick = (id) => {
-    selectedItem === id ? setSelectedItem(null) : setSelectedItem(id);
-  };
 
   return (
     <div className="App">
       <div className="dropdown">
         <div className="dropdown-header" onClick={toggleDropdown}>
-          {/* {selectedItem
-            ? items.filter((item) => item.id === selectedItem).label
-            : `Guests ${adult + children}` || infants > 0
-            ? `Infant ${children}`
-            : ""} */}
           <div className="guest--types">
             {`Guests ${adult + children}`}
             {infants > 0 ? ` Infant ${infants}` : null}
-            {pets > 0 ? ` Pets ${pets}` : ""}
+            {pets > 0 ? ` Pets ${pets}` : null}
           </div>
-          <p className={`fa fa-chevron-right icon ${isOpen && "open"}`}>
-            &#8594;
-          </p>
+          <p className={`icon ${isOpen && "open"}`}>&#8594;</p>
         </div>
         <div className={`dropdown-body ${isOpen && "open"}`}>
           <div className="value--list">
