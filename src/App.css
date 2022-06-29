@@ -1,0 +1,101 @@
+/* body {
+  background-color: #FAC945;
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+  margin-top: 150px;
+  font-size: 17px;
+  color: #4B4D54;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+} */
+
+.dropdown {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin: 10rem auto;
+}
+
+.dropdown-header {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-body {
+  padding: 5px;
+  border-top: 1px solid #e5e8ec;
+  display: none;
+}
+
+.dropdown-body.open {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px;
+}
+
+.dropdown-item:hover {
+  cursor: pointer;
+}
+
+.dropdown-item-dot {
+  opacity: 0;
+  color: #91a5be;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown-item-dot.selected {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 13px;
+  color: #91a5be;
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.icon.open {
+  transform: rotate(90deg);
+}
+
+.value--list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 15px 20px;
+}
+
+.value--type {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+/* <button onClick={() => setCount(count - 1)}>-</button>
+              <p>{count}</p>
+              <button onClick={() => setCount(count + 1)}>+</button> */
